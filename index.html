@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holiday Greeting</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/snowman.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Banner -->
+    <h1 class="holiday">HAPPY HOLIDAYS!</h1>
+
+    <!-- Greeting Controls -->
+    <div class="controls-container">
+        <h2 class="greeting">Customize This Greeting!</h2>
+        <div class="controllers">
+            <!-- Snow Controls -->
+            <div class="snower">
+                <label for="snowing">Amount of snow</label>
+                <select onchange="changeSnow()" name="snowing" id="snowing">
+                    <option value="no-snow">No Snow</option>
+                    <option value="snow">Snow</option>
+                    <option value="more-snow">More Snow</option>
+                    <option value="even-more-snow">Even More Snow</option>
+                </select>
+            </div>
+            <!-- Lighting Controls -->
+            <div class="lighter">
+                <label for="lights">Change the lights</label>
+                <select onchange="changeLights()" name="lights" id="lights">
+                    <option value="off-lights">Lights Off</option>
+                    <option value="flash-lights">Flashy Lights</option>
+                    <option value="wave-lights">Wavy Lights</option>
+                </select>
+            </div>
+            <!-- Audio Controls -->
+            <div class="music">
+                <p>Play some music</p>
+                <audio controls>
+                    <source src="assets/Alex-Productions-Background-Christmas-Instrumental-Christmas-is-Coming.mp3"
+                        type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+    </div>
+
+    <!-- Snow Container | Holds divs for snow amounts-->
+    <div class="snow-container"></div>
+
+    <!-- Holiday Lights -->
+    <div class="string">
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+    </div>
+
+    <!-- Random Joke Generator -->
+    <div class="joke-container">
+        <h2 class="joke-title">RANDOM HOLIDAY JOKE GENERATOR</h2>
+        <p class="joke-instruct">Click the button to get a joke</p>
+        <button onclick="getJoke(event)" class="joke-btn">Get a Joke</button>
+        <div id="result"></div>
+    </div>
+
+
+    <!-- Snowman Container -->
+    <!-- <div class="snowman-container">
+        <div class="snowman1">
+            <div class="md-circle"></div>
+            <div class="lg-circle"></div>
+        </div>
+        <div class="snowman2">
+            <div class="md-circle"></div>
+            <div class="lg-circle"></div>
+        </div>
+        <div class="snowman3">
+            <div class="md-circle"></div>
+            <div class="lg-circle"></div>
+        </div>
+    </div> -->
+
+    <!-- Snowy Ground -->
+    <footer>
+        <img class="snowy-ground" src="assets/snowy-ground.png" alt="snowy ground">
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

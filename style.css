@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Rubik+Bubbles&family=Silkscreen:wght@400;700&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background-color: #87CEEB;
+    height: 100vh;
+}
+
+/* HOLIDAY BANNER */
+.holiday {
+    color: #ffffff;
+    height: 50px;
+    padding: 20px;
+    text-align: center;
+    text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+
+    font-family: 'Rubik Bubbles', sans-serif;
+    font-size: 4em;
+}
+
+/* GREETING CONTROLS */
+.controls-container {
+    background-color: #79A081;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.controllers {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.greeting {
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    /* padding: 40px; */
+    text-align: center;
+}
+
+.snower, .lighter, .music {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* SNOW FALLING */
+.snow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(assets/snow-falling.png);
+
+    z-index: -1;
+}
+
+.snow1 {
+    animation: animateSnow1 15s linear infinite;
+}
+@keyframes animateSnow1 {
+    0% {
+        background-position: 0 0;
+        filter: blur(2px);
+    }
+    100% {
+        background-position: 1256px 1240px;
+        filter: blur(2px);
+    }
+}
+
+.snow2 {
+    animation: animateSnow2 10s linear infinite;
+}
+@keyframes animateSnow2 {
+    0% {
+        background-position: 0 0;
+        filter: blur(2px);
+    }
+    100% {
+        background-position: 1256px 1240px;
+        filter: blur(2px);
+    }
+}
+
+.snow3 {
+    animation: animateSnow3 15s linear infinite;
+}
+@keyframes animateSnow3 {
+    0% {
+        background-position: 0 0;
+        transform: scale(2);
+    }
+    100% {
+        background-position: 0 1240px;
+        transform: scale(2);
+    }
+}
+
+
+/* HOLIDAY LIGHTS */
+.string {
+    border-top: 3px solid rgb(44, 43, 43);
+    display: flex;
+    justify-content: space-between;
+    height: 10px;
+}
+
+.bulb, .flash-bulb, .wave-bulb {
+    border-radius: 50%;
+    height: 30px;
+    width: 15px;
+    background-color: #fdf4dc;
+}
+
+/* Animation #1 */
+.wave-bulb {
+    background-color: #008000;
+    animation: animcolor 1s linear infinite;
+}
+@keyframes animcolor {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+/* Animation #2 */
+.flash-bulb:nth-of-type(5n+0) {
+    background-color: #E82626;
+    animation: flash1 1s ease-in-out infinite;
+}
+@keyframes flash1 {
+    from {
+        opacity: 1;
+        filter: drop-shadow(0 0 8px #E82626);
+    }
+    to {
+        opacity: .5;
+    }
+}
+
+.flash-bulb:nth-of-type(5n+1) {
+    background-color: #2626E8;
+    animation: flash2 1s ease-in-out infinite;
+}
+@keyframes flash2 {
+    from {
+        opacity: 1;
+        filter: drop-shadow(0 0 8px #2626E8);
+    }
+    to {
+        opacity: .5;
+    }
+}
+
+.flash-bulb:nth-of-type(5n+2) {
+    background-color: #26E826;
+    animation: flash3 1s ease-in-out infinite;
+}
+@keyframes flash3 {
+    from {
+        opacity: 1;
+        filter: drop-shadow(0 0 8px #26E826);
+    }
+    to {
+        opacity: .5;
+    }
+}
+
+.flash-bulb:nth-of-type(5n+3) {
+    background-color: #ffa500;
+    animation: flash4 1s ease-in-out infinite;
+}
+@keyframes flash4 {
+    from {
+        opacity: 1;
+        filter: drop-shadow(0 0 8px #ffa500);
+    }
+    to {
+        opacity: .5;
+    }
+}
+
+.flash-bulb:nth-of-type(5n+4) {
+    background-color: #E826E8;
+    animation: flash5 1s ease-in-out infinite;
+}
+@keyframes flash5 {
+    from {
+        opacity: 1;
+        filter: drop-shadow(0 0 8px #E826E8);
+    }
+    to {
+        opacity: .5;
+    }
+}
+
+.bulb:nth-of-type(2n) {
+    animation-delay: .5s;
+}
+
+/* RANDOM JOKE GENERATOR */
+.joke-container {
+    margin: 50px;
+    text-align: center;
+}
+
+.joke-title {
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 24px;
+}
+
+.joke-instruct {
+    margin: 10px;
+}
+
+.joke-btn {
+    background-color: #79A081;
+    border: none;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.joke-btn:hover {
+    color: #ffffff;
+    box-shadow: 0 0 15px #79A081;
+    text-shadow: 0 0 5px #79A081;
+    transform: scale(1.1);
+}
+
+.joke-instruct {
+    font-size: 18px;
+}
+
+#joke-setup, #joke-answer {
+    font-size: 20px;
+}
+
+/* SNOWMAN */
+.snowman-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.snowman1, .snowman2, .snowman3 {
+    margin-top: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.md-circle {
+    background-color: #ffffff;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+}
+.lg-circle {
+    background-color: #ffffff;
+    border-radius: 50%;
+    height: 160px;
+    width: 160px;
+}
+
+/* SNOWY GROUND */
+.snowy-ground {
+    position: absolute;
+    bottom: 0px;
+    height: 50%;
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .controllers {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .greeting {
+        padding: 40px;
+    }
+}
