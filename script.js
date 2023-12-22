@@ -36,7 +36,6 @@ function changeLights() {
 }
 
 // Random Joke Generator
-// Joke API source = https://github.com/marcyvillegas/random-joke-generator?tab=readme-ov-file
 const jokeURL = "https://v2.jokeapi.dev/joke/Christmas?blacklistFlags=nsfw,religious,political,racist,sexist,explicit"
 const result = document.querySelector("#result")
 

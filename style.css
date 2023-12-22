@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Rubik+Bubbles&family=Silkscreen:wght@400;700&display=swap');
 
-  * {
+* {
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
@@ -10,6 +10,7 @@
 body {
     background-color: #87CEEB;
     height: 100vh;
+    overflow: hidden; /* fixed snow overflow, desktop */
 }
 
 /* HOLIDAY BANNER */
@@ -18,7 +19,7 @@ body {
     height: 50px;
     padding: 20px;
     text-align: center;
-    text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+    text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
 
     font-family: 'Rubik Bubbles', sans-serif;
     font-size: 4em;
@@ -41,17 +42,22 @@ body {
     font-family: 'Silkscreen', sans-serif;
     font-size: 24px;
     font-weight: 700;
-    /* padding: 40px; */
     text-align: center;
 }
 
-.snower, .lighter, .music {
+.snower,
+.lighter,
+.music {
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
 /* SNOW FALLING */
+.snow-container, .snow, .snow3 {
+    overflow: hidden; /* fix snow overflow, mobile */
+}
+
 .snow {
     position: absolute;
     top: 0;
@@ -66,11 +72,13 @@ body {
 .snow1 {
     animation: animateSnow1 15s linear infinite;
 }
+
 @keyframes animateSnow1 {
     0% {
         background-position: 0 0;
         filter: blur(2px);
     }
+
     100% {
         background-position: 1256px 1240px;
         filter: blur(2px);
@@ -80,11 +88,13 @@ body {
 .snow2 {
     animation: animateSnow2 10s linear infinite;
 }
+
 @keyframes animateSnow2 {
     0% {
         background-position: 0 0;
         filter: blur(2px);
     }
+
     100% {
         background-position: 1256px 1240px;
         filter: blur(2px);
@@ -94,11 +104,13 @@ body {
 .snow3 {
     animation: animateSnow3 15s linear infinite;
 }
+
 @keyframes animateSnow3 {
     0% {
         background-position: 0 0;
         transform: scale(2);
     }
+
     100% {
         background-position: 0 1240px;
         transform: scale(2);
@@ -114,7 +126,9 @@ body {
     height: 10px;
 }
 
-.bulb, .flash-bulb, .wave-bulb {
+.bulb,
+.flash-bulb,
+.wave-bulb {
     border-radius: 50%;
     height: 30px;
     width: 15px;
@@ -126,6 +140,7 @@ body {
     background-color: #008000;
     animation: animcolor 1s linear infinite;
 }
+
 @keyframes animcolor {
     100% {
         filter: hue-rotate(360deg);
@@ -137,11 +152,13 @@ body {
     background-color: #E82626;
     animation: flash1 1s ease-in-out infinite;
 }
+
 @keyframes flash1 {
     from {
         opacity: 1;
         filter: drop-shadow(0 0 8px #E82626);
     }
+
     to {
         opacity: .5;
     }
@@ -151,11 +168,13 @@ body {
     background-color: #2626E8;
     animation: flash2 1s ease-in-out infinite;
 }
+
 @keyframes flash2 {
     from {
         opacity: 1;
         filter: drop-shadow(0 0 8px #2626E8);
     }
+
     to {
         opacity: .5;
     }
@@ -165,11 +184,13 @@ body {
     background-color: #26E826;
     animation: flash3 1s ease-in-out infinite;
 }
+
 @keyframes flash3 {
     from {
         opacity: 1;
         filter: drop-shadow(0 0 8px #26E826);
     }
+
     to {
         opacity: .5;
     }
@@ -179,11 +200,13 @@ body {
     background-color: #ffa500;
     animation: flash4 1s ease-in-out infinite;
 }
+
 @keyframes flash4 {
     from {
         opacity: 1;
         filter: drop-shadow(0 0 8px #ffa500);
     }
+
     to {
         opacity: .5;
     }
@@ -193,11 +216,13 @@ body {
     background-color: #E826E8;
     animation: flash5 1s ease-in-out infinite;
 }
+
 @keyframes flash5 {
     from {
         opacity: 1;
         filter: drop-shadow(0 0 8px #E826E8);
     }
+
     to {
         opacity: .5;
     }
@@ -241,7 +266,8 @@ body {
     font-size: 18px;
 }
 
-#joke-setup, #joke-answer {
+#joke-setup,
+#joke-answer {
     font-size: 20px;
 }
 
@@ -251,18 +277,22 @@ body {
     justify-content: space-around;
 }
 
-.snowman1, .snowman2, .snowman3 {
+.snowman1,
+.snowman2,
+.snowman3 {
     margin-top: 65px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .md-circle {
     background-color: #ffffff;
     border-radius: 50%;
     height: 80px;
     width: 80px;
 }
+
 .lg-circle {
     background-color: #ffffff;
     border-radius: 50%;
@@ -278,6 +308,8 @@ body {
     width: 100%;
 }
 
+
+/* MOBILE SETTINGS */
 @media only screen and (max-width: 600px) {
     .controllers {
         display: flex;
@@ -286,5 +318,9 @@ body {
 
     .greeting {
         padding: 40px;
+    }
+
+    .snowy-ground {
+        position: fixed;
     }
 }
