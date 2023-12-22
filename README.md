@@ -3,12 +3,18 @@
 Welcome to the Holiday Greeting Site! Spread festive cheer with this customizable greeting, interactive elements, and a touch of humor. Share joy by controlling the snowfall, string of lights, and playing the holiday tune. Plus, don't forget to enjoy a good laugh with the random holiday joke generator powered by a public API.
 
 ## Table of Contents
-- [Features](#features)
 - [Getting Started](#getting-started)
+- [Features](#features)
 - [Wireframe](#wireframe)
 - [The Site](#the-site)
 - [Technologies Used](#technologies-used)
 - [Credits](#credits)
+
+## Getting Started
+
+To get started, simply open the Holiday Greeting Site in your web browser. Feel free to share the link with your friends and family to bring a smile to their faces.
+
+Visit the [Holiday Greeting Site](https://mixie-png.github.io/holiday-greeting/) to share the customizable holiday greeting site.
 
 ## Features
 
@@ -29,12 +35,6 @@ Bringing smiles to users' faces with a touch of humor. The random holiday joke g
 
 ## The Site
 <img src="assets/greeting-site.gif" alt="Holiday Greeting Site" height="400">
-
-## Getting Started
-
-To get started, simply open the Holiday Greeting Site in your web browser. Feel free to share the link with your friends and family to bring a smile to their faces.
-
-Visit the [Holiday Greeting Site](https://your-username.github.io/happy-holidays-greeting-site) to share the customizable holiday greeting site.
 
 ## Technologies Used
 
